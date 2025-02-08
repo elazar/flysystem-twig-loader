@@ -25,10 +25,12 @@
         "pestphp/pest": "^3"
     },
     "scripts": {
+        "post-install-cmd": [
+            "chmod -R 777 vendor/pestphp/pest/.temp",
+            "chmod 777 vendor/pest-plugins.json"
+        ],
         "test": [
             "@composer install",
-            "chmod -R 777 vendor/pestphp/pest/.temp",
-            "chmod 777 vendor/pest-plugins.json",
             "pest"
         ]
     },
