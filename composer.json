@@ -1,0 +1,36 @@
+{
+    "name": "elazar/flysystem-twig-loader",
+    "version": "1.0.0",
+    "description": "Flysystem-backed loader for Twig templates",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Turland",
+            "email": "me@matthewturland.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Elazar\\FlysystemTwigLoader\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "league/flysystem": "^2.1 || ^3.0",
+        "twig/twig": "^3"
+    },
+    "require-dev": {
+        "league/flysystem-memory": "^3",
+        "pestphp/pest": "^3"
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    }
+}

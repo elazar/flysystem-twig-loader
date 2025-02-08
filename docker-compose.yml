@@ -1,0 +1,19 @@
+x-common: &common
+  working_dir: /app
+  volumes:
+    - ".:/app"
+  command: composer test
+
+services:
+
+  php82:
+    build: ./docker/php82
+    <<: *common
+
+  php83:
+    build: ./docker/php83
+    <<: *common
+
+  php84:
+    build: ./docker/php84
+    <<: *common
