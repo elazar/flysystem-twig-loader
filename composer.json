@@ -28,6 +28,7 @@
         "test": [
             "@composer install",
             "chmod -R 777 vendor/pestphp/pest/.temp",
+            "chmod 777 vendor/pest-plugins.json",
             "pest"
         ]
     },
