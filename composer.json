@@ -27,7 +27,7 @@
     "scripts": {
         "post-install-cmd": [
             "chmod -R 777 vendor/pestphp/pest/.temp",
-            "chmod 777 vendor/pest-plugins.json"
+            "chmod 777 vendor"
         ],
         "test": [
             "@composer install",
