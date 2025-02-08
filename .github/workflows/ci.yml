@@ -27,5 +27,6 @@ jobs:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
         restore-keys: ${{ runner.os }}-composer-
-    - uses: NWBY/pest-action@v1.2.0
+    - name: Run tests
+      run: composer test
 
