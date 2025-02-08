@@ -25,7 +25,11 @@
         "pestphp/pest": "^3"
     },
     "scripts": {
-        "test": "pest"
+        "test": [
+            "@composer install",
+            "chmod -R 777 vendor/pestphp/pest/.temp",
+            "pest"
+        ]
     },
     "config": {
         "allow-plugins": {
