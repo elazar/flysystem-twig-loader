@@ -12,6 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         php: [ '8.2', '8.3', '8.4' ]
+    env:
+      COMPOSER_CACHE_DIR: /tmp/composer-cache
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
@@ -21,7 +23,7 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v4
         with:
-          path: /tmp/composer-cache
+          path: ${{ env.COMPOSER_CACHE_DIR }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
           restore-keys: ${{ runner.os }}-composer-
       - name: Run tests
